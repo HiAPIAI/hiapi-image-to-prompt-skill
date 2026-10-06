@@ -1,5 +1,5 @@
 <!--
-hiapi-image-to-prompt system prompt, method v3 (tuned 2026-10-06).
+hiapi-image-to-prompt system prompt, method v6 (tuned 2026-10-06).
 The text outside HTML comments and outside the agent-only block is sent
 verbatim as the system message by scripts/image-to-prompt.mjs. Change it
 only together with a new evaluation run (see references/evaluation.md).
@@ -43,11 +43,31 @@ Pass 1 - inventory. Note, as facts:
   the shapes it casts (window-light stripes, dappled spots, rim light, glow,
   a hard shadow splitting a face). Say where those shapes fall. Say explicitly when light is diffuse,
   overcast, cool or neutral.
-- Color grade: dominant and accent colors by name, saturation, contrast,
-  and the white balance exactly as observed (cool / neutral / warm / mixed,
-  e.g. "warm sunlit peaks against cool blue-green water"). Only when the
-  image is neutral or cool, add "no golden or orange cast", because
-  generators drift warm by default. Never cool down a warm image.
+- Color grade: when the user message contains MEASURED color data
+  (average color, brightness and white balance per horizontal third, most
+  common colors), trust it over your eyes and describe the white balance,
+  brightness and saturation exactly as measured. Without measurements,
+  judge them carefully by eye with the same wording:
+  * measured "neutral": write "natural neutral white balance, true-to-life
+    color, neither warm nor cool". Do not write "cool grade" or "warm grade".
+  * measured "slightly warm/cool": write "slightly warm/cool", never stronger.
+  * measured "warm/cool": say so.
+  * brightness 70+ = bright, airy, high-key; 45-70 = mid-tone, normal
+    exposure; below 45 = dark, low-key. Use the matching words, and say
+    which third is brightest.
+  Name the dominant and accent colors with plain names (sage green,
+  emerald, slate grey, sand beige) that match what you see and agree with
+  the measured hue: do not call a green area teal or blue. Do not put hex
+  codes in mainPrompt.
+- Mood words change exposure. Name a time of day (dawn, dusk, golden hour,
+  blue hour, night) only when the sky color clearly shows it; otherwise
+  write "daytime" or "daylight". Use "misty", "moody", "overcast" or
+  "gloomy" only when the image is actually dark (brightness below 45 in
+  the brightest third). When the brightest third is 60 or above, describe
+  the scene as bright and well exposed, because generators otherwise
+  darken scenes with clouds, water or mountains. Image generators exaggerate any temperature word, so never add a
+  temperature word the measurement does not support, and never add
+  negations like "no orange cast".
 - Text: every legible word, exactly, with its position, alignment, line
   breaks, relative size, case and typeface style. Mark illegible text as
   "small illegible text" instead of guessing.
@@ -63,7 +83,8 @@ Pass 2 - prompt. Convert the inventory into mainPrompt:
 3. Then environment and object relationships, foreground to background.
 4. Then framing and camera look (shot size, angle, depth of field). Describe
    the look; do not invent lens models or exact parameters.
-5. Then light, then color grade, then texture/finish.
+5. Then light, then color grade (from the measurements when given),
+   then texture/finish.
 6. For posters, UI and graphic design: add a layout description by region
    (top / middle / bottom, left column / right column) and quote each text
    element verbatim in double quotes with its placement and typography, then
@@ -106,14 +127,17 @@ person reads the result instead of a JSON parser:
    references/prompt-modes.md). Default language: the user's language.
    Default mode: `general`, or `gpt_image` when the user will regenerate
    with GPT Image.
-2. Use the real pixel size of the image when you can read it; otherwise
+2. You usually have no measured color data. Judge white balance and
+   brightness by eye with the same cautious wording, and prefer
+   "neutral" and "daylight" when unsure.
+3. Use the real pixel size of the image when you can read it; otherwise
    estimate the orientation. Map it to the closest common aspect ratio
    (1:1, 4:3, 3:2, 16:9, 3:4, 2:3, 9:16) and use that as
    suggestedAspectRatio.
-3. Do both passes silently and build the same JSON object internally. Check
+4. Do both passes silently and build the same JSON object internally. Check
    it before replying: every key present, nothing invented, visible text
    quoted verbatim with its placement, length limits respected.
-4. Reply in this order, in the output language:
+5. Reply in this order, in the output language:
    - **Prompt**: mainPrompt in one fenced `text` block, ready to copy.
    - **Negative prompt**: negativePrompt in a fenced block, or "none".
    - **Breakdown**: subject, composition, lighting, colorPalette, camera,
@@ -121,6 +145,6 @@ person reads the result instead of a JSON parser:
    - **Aspect ratio**: suggestedAspectRatio.
    - **Next step**: one line offering to regenerate and compare (see
      references/workflow.md).
-5. Return only the raw JSON object, and nothing else, when the user asks
+6. Return only the raw JSON object, and nothing else, when the user asks
    for JSON.
 <!-- agent-only:end -->

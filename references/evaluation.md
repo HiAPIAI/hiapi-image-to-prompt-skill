@@ -17,9 +17,12 @@ How the method in [system-prompt.md](system-prompt.md) was tuned, and what it ca
 | v0 | Ported VisuCue prompt, strict `json_schema` | 7/8 | 7.00 (on 7) | Japanese text-heavy poster failed 3/3: under strict `json_schema` the model ran to the token cap with empty content. |
 | v1 | Inventory → prompt two-pass; positions; silhouettes; verbatim text with layout; `json_object` | 8/8 | 6.88 | Anime expression, bottle silhouette, and the poster's left-aligned text block fixed; Japanese poster reproduced. |
 | v2 | + trace the dominant compositional shape; cast-light shapes; small-element counts; no invented details | 8/8 | 7.00 | English poster's S-curve river ribbon recovered; interior window-light stripes recovered. |
-| v3 | + white balance as observed; never cool a warm image; hard face shadows | 4-image check | — | Chinese poster's light ribbon now S-curves through the skyline. |
+| v3 | + white balance as observed; never cool a warm image; hard face shadows | 4-image check | — | Chinese poster's light ribbon now S-curves through the skyline. Landscape regressed: the describer called a neutral daylight photo "cool, dawn, misty" and the regeneration turned dark blue (mean RGB 77/100/115 vs original 114/120/118). |
+| v4 | + measured color data in the request (per-third average color, brightness, white balance, common colors); describe temperature only as measured | 4-image check | — | Warm cloud highlights on the landscape and the English poster's warm gold returned. Landscape water still named "teal" and drifted blue. |
+| v5 | + measured hex codes inside mainPrompt | 2-image check | — | Worse: the most-common-color buckets skew dark and missed the emerald water; lake turned grey. Dropped. |
+| v6 | v4 + hue check when naming colors; time-of-day and mood words (dawn, misty, overcast) only when the image is actually dark | 4-image check, landscape twice | — | Best landscape so far (bright daytime, warm peaks, emerald water) on one run, slightly dark on the other; Chinese poster unchanged; product color a little more saturated. |
 
-v3 is the shipped method.
+v6 is the shipped method. The HiAPI web tool measures colors on the server and passes them in the request. The bundled script has no native image decoder, so it sends no measurements; the prompt then falls back to careful judgement by eye with the same wording rules. Single samples per image: treat differences between v4 and v6 as directional, not significant.
 
 ## Conclusion
 

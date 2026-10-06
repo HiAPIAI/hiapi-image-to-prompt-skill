@@ -26,4 +26,4 @@ A leading Markdown code fence is tolerated. Try again or switch `--model` after 
 
 ## Example
 
-[examples/product-still-life.gpt_image.en.json](../examples/product-still-life.gpt_image.en.json) is an unedited v3 result for a 1200x900 product photo. When you regenerate, pass `suggestedAspectRatio` explicitly as the aspect ratio.
+[examples/product-still-life.gpt_image.en.json](../examples/product-still-life.gpt_image.en.json) is an unedited v3 result (method v6 changes only color and mood wording) for a 1200x900 product photo. When you regenerate, pass `suggestedAspectRatio` explicitly as the aspect ratio.

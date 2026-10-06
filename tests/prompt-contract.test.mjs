@@ -15,14 +15,15 @@ test("API system prompt strips comments and the agent-only block", () => {
   assert.equal(apiSystemPrompt("<!-- a -->x<!-- agent-only:start -->y<!-- agent-only:end -->"), "x");
 });
 
-test("method v3 rules are present", () => {
+test("method v6 rules are present", () => {
   for (const rule of [
     "Work in two silent passes",
     "The dominant compositional shape",
     "the shapes it casts",
     "a hard shadow splitting a face",
-    "white balance exactly as observed",
-    "Never cool down a warm image",
+    "MEASURED color data",
+    "never add a\n  temperature word the measurement does not support",
+    "Mood words change exposure",
     "Generators add\n  extras when counts are missing",
     'add "No other text."',
     "Never add anything that is not visible",
