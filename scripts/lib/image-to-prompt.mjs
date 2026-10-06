@@ -72,6 +72,9 @@ export function closestCommonAspectRatio(width, height) {
     Math.abs(Math.log(c[1] / source)) < Math.abs(Math.log(best[1] / source)) ? c : best)[0];
 }
 
+const ALWAYS_ENGLISH = new Set(["midjourney", "flux", "stable_diffusion"]);
+const ENGLISH_PROMPT_RULE = " Write mainPrompt and negativePrompt in English even when the output language is Chinese, because this model reads English prompts best; keep the other fields in the output language.";
+
 export function buildUserText({ mode, language, width, height }) {
   const ratio = closestCommonAspectRatio(width, height);
   return `Analyze this reference image.
@@ -79,7 +82,7 @@ Output language: ${language === "zh" ? "Simplified Chinese" : "English"}.
 Source dimensions: ${width}x${height}.
 Closest common aspect ratio: ${ratio}.
 Orientation: ${width > height ? "landscape (wider than tall)" : width < height ? "portrait (taller than wide)" : "square"}. State this orientation correctly.
-Output adaptation: ${promptModeInstruction(mode, language, ratio)}
+Output adaptation: ${promptModeInstruction(mode, language, ratio)}${ALWAYS_ENGLISH.has(mode) && language === "zh" ? ENGLISH_PROMPT_RULE : ""}
 Return only the JSON object.`;
 }
 

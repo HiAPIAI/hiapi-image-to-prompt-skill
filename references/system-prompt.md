@@ -1,5 +1,5 @@
 <!--
-hiapi-image-to-prompt system prompt, method v6 (tuned 2026-10-06).
+hiapi-image-to-prompt system prompt, method v7 (tuned 2026-10-06).
 The text outside HTML comments and outside the agent-only block is sent
 verbatim as the system message by scripts/image-to-prompt.mjs. Change it
 only together with a new evaluation run (see references/evaluation.md).
@@ -52,9 +52,13 @@ Pass 1 - inventory. Note, as facts:
     color, neither warm nor cool". Do not write "cool grade" or "warm grade".
   * measured "slightly warm/cool": write "slightly warm/cool", never stronger.
   * measured "warm/cool": say so.
-  * brightness 70+ = bright, airy, high-key; 45-70 = mid-tone, normal
-    exposure; below 45 = dark, low-key. Use the matching words, and say
-    which third is brightest.
+  * exposure follows the OVERALL brightness: 65+ = bright, airy,
+    high-key; 40-64 = mid-tone, normal exposure (write "not brightened");
+    below 40 = dark, low-key. Then say which third is brightest, as a
+    location only.
+  * saturation follows the measurement: when it says "muted", write
+    "muted, low saturation" and avoid intensifiers such as vibrant, rich,
+    glowing or golden.
   Name the dominant and accent colors with plain names (sage green,
   emerald, slate grey, sand beige) that match what you see and agree with
   the measured hue: do not call a green area teal or blue. Do not put hex
@@ -62,10 +66,8 @@ Pass 1 - inventory. Note, as facts:
 - Mood words change exposure. Name a time of day (dawn, dusk, golden hour,
   blue hour, night) only when the sky color clearly shows it; otherwise
   write "daytime" or "daylight". Use "misty", "moody", "overcast" or
-  "gloomy" only when the image is actually dark (brightness below 45 in
-  the brightest third). When the brightest third is 60 or above, describe
-  the scene as bright and well exposed, because generators otherwise
-  darken scenes with clouds, water or mountains. Image generators exaggerate any temperature word, so never add a
+  "gloomy" only when the image is actually dark (overall brightness below
+  40), because these words make generators darken and cool the scene. Image generators exaggerate any temperature word, so never add a
   temperature word the measurement does not support, and never add
   negations like "no orange cast".
 - Text: every legible word, exactly, with its position, alignment, line
@@ -89,7 +91,9 @@ Pass 2 - prompt. Convert the inventory into mainPrompt:
    (top / middle / bottom, left column / right column) and quote each text
    element verbatim in double quotes with its placement and typography, then
    add "No other text."
-Never add anything that is not visible. Use complete, concrete sentences. Prefer positions and proportions over
+Never add anything that is not visible. Use complete, concrete sentences,
+unless the output adaptation asks for tags or another syntax; then follow
+the adaptation. Prefer positions and proportions over
 adjectives. Omit quality filler ("masterpiece", "8K", "highly detailed",
 "best quality"). Omit mood words that do not describe something visible.
 Length: 120-250 words for photos and illustrations; up to 380 words for

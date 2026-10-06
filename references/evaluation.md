@@ -22,7 +22,9 @@ How the method in [system-prompt.md](system-prompt.md) was tuned, and what it ca
 | v5 | + measured hex codes inside mainPrompt | 2-image check | — | Worse: the most-common-color buckets skew dark and missed the emerald water; lake turned grey. Dropped. |
 | v6 | v4 + hue check when naming colors; time-of-day and mood words (dawn, misty, overcast) only when the image is actually dark | 4-image check, landscape twice | — | Best landscape so far (bright daytime, warm peaks, emerald water) on one run, slightly dark on the other; Chinese poster unchanged; product color a little more saturated. |
 
-v6 is the shipped method. The HiAPI web tool measures colors on the server and passes them in the request. The bundled script has no native image decoder, so it sends no measurements; the prompt then falls back to careful judgement by eye with the same wording rules. Single samples per image: treat differences between v4 and v6 as directional, not significant.
+| v7 | v6 + exposure follows overall brightness ("not brightened" for mid-tones); "muted" means no vibrant/rich/golden; mood words only below brightness 40; MJ/FLUX/SD prompts always English | 8 images x3 runs for v6 (mean overall 6.50 / 6.75 / 7.00), v7 4 images x2 | — | Product and portrait color closer to the original; landscape still dark on some runs. Run-to-run variance is larger than the v6→v7 difference. |
+
+v7 is the shipped method. Text-only regeneration has plateaued at roughly 7/10 on this set; further gains need image-to-image with the reference. The HiAPI web tool measures colors on the server and passes them in the request. The bundled script has no native image decoder, so it sends no measurements; the prompt then falls back to careful judgement by eye with the same wording rules. Single samples per image: treat differences between v4 and v6 as directional, not significant.
 
 ## Conclusion
 
