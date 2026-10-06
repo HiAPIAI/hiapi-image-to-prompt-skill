@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "skillId": "hiapi-image-to-prompt",
+  "skillName": "HiAPI Image to Prompt",
+  "family": "image-to-prompt",
+  "version": "0.1.0",
+  "status": "local-candidate",
+  "publicRepo": "HiAPIAI/hiapi-image-to-prompt-skill",
+  "modelIds": ["deepseek-v4.1-flash"],
+  "companionSkills": ["HiAPIAI/hiapi-gpt-image-2-5-skill"],
+  "webTool": "https://www.hiapi.ai/en/tools/image-to-prompt",
+  "centralDirectory": "hiapiai/skills/hiapi-skills",
+  "relatedRepositories": [],
+  "cover": "assets/social-preview-image-to-prompt.png",
+  "requiredFiles": [
+    "references/system-prompt.md",
+    "references/prompt-modes.md",
+    "references/evaluation.md",
+    "scripts/image-to-prompt.mjs",
+    "tests/image-to-prompt.test.mjs"
+  ],
+  "publicContractMarkers": ["deepseek-v4.1-flash", "json_object", "4 MB", "gpt_image", "stable_diffusion"],
+  "forbiddenPublicClaims": ["pixel-perfect copy", "exact original prompt", "the free web tool is live", "free forever"],
+  "liveContractCommand": "npm run check:contract",
+  "testCommand": "npm test"
+}

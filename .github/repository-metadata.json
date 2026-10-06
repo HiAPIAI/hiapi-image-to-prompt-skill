@@ -1,0 +1,8 @@
+{
+  "description": "Image to Prompt Agent Skill: turn one reference image into a prompt that regenerates a similar image (GPT Image, Midjourney, FLUX, Stable Diffusion) — works with your Agent's own vision, optional HiAPI script",
+  "homepage": "https://www.hiapi.ai/en/tools/image-to-prompt",
+  "topics": ["hiapi", "image-to-prompt", "reverse-prompt", "prompt-engineering", "agent-skills", "codex", "claude-code", "gpt-image", "midjourney", "flux", "stable-diffusion"],
+  "socialPreview": "assets/github-social-preview.jpg",
+  "applyAutomatically": false,
+  "note": "Release-time intent only. Homepage points at the web tool, which is not live yet; switch to the GitHub README or wait for launch before applying."
+}

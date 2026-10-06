@@ -1,0 +1,8 @@
+interface:
+  display_name: "HiAPI Image to Prompt"
+  short_description: "Turn one reference image into a prompt that regenerates a similar image"
+  brand_color: "#F97316"
+  default_prompt: "Use $hiapi-image-to-prompt to look at this image and write a prompt that recreates it. Apply references/system-prompt.md yourself; use scripts/image-to-prompt.mjs only if I ask for the HiAPI path."
+
+policy:
+  allow_implicit_invocation: true

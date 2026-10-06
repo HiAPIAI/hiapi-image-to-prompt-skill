@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/HiAPIAI/hiapi-image-to-prompt-skill/blob/main/references/output-schema.json",
+  "title": "ImagePromptResultV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "title",
+    "summary",
+    "mainPrompt",
+    "negativePrompt",
+    "subject",
+    "composition",
+    "lighting",
+    "colorPalette",
+    "camera",
+    "style",
+    "qualityDetails",
+    "suggestedAspectRatio"
+  ],
+  "properties": {
+    "version": {
+      "type": "integer",
+      "const": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 600
+    },
+    "mainPrompt": {
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 8000
+    },
+    "negativePrompt": {
+      "type": "string",
+      "maxLength": 3000
+    },
+    "subject": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 240
+      },
+      "maxItems": 20
+    },
+    "composition": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 240
+      },
+      "maxItems": 20
+    },
+    "lighting": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 240
+      },
+      "maxItems": 20
+    },
+    "colorPalette": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 240
+      },
+      "maxItems": 20
+    },
+    "camera": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 240
+      },
+      "maxItems": 20
+    },
+    "style": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 240
+      },
+      "maxItems": 20
+    },
+    "qualityDetails": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 240
+      },
+      "maxItems": 20
+    },
+    "suggestedAspectRatio": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 20
+    }
+  },
+  "description": "Result object returned by scripts/image-to-prompt.mjs --json and by the HiAPI Image to Prompt web tool. Ported from VisuCue ImagePromptResultV1 (MIT). Validation is lenient (20 items, 240 chars); the system prompt asks for fewer and shorter items."
+}

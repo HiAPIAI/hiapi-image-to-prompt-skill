@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "title": "Amber Glass Fragrance Bottle with Olive Branch",
+  "summary": "A warm-lit product still life of an amber glass perfume bottle on a porous stone block, with an olive branch and a blank folded card, against a textured plaster wall.",
+  "mainPrompt": "A photograph, vertical product still life, warm directional sunlight. In the left-center, standing on a pale pitted stone block, is a single squat rounded-trapezoid perfume bottle of glossy translucent amber-brown glass, its shoulders wide and its sides tapering gently to a flat base; it is topped by a flattened oval dome cap in matte pale-grey stone-like material. A single olive branch with narrow silvery-green leaves lies along the right side of the stone ledge, entering from behind the bottle and trailing to the right frame edge. In the lower-right foreground a blank folded cream paper card rests tent-like on the stone, blank with no text. Behind, filling the frame, is a mottled grey-beige plaster wall. A soft-edged diagonal band of warm light falls across the upper-left wall and the top of the bottle, while the right side of the wall sits in soft shadow; the bottle casts an amber-tinted caustic glow onto the stone at its right. Eye-level camera slightly above the ledge, medium close-up, foreground tack-sharp with the wall gently out of focus. Warm neutral beige palette with amber and muted olive-green accents, low saturation, soft contrast, fine photographic grain, no golden cast on the grey wall.",
+  "negativePrompt": "text, letters, labels on the bottle, brand logo, extra bottles, multiple perfume flacons, additional olive branches, water droplets, hard specular hotspots, colored background, people, hands, oversaturated orange, cartoon or illustration rendering",
+  "subject": [
+    "One amber-brown glass perfume bottle, squat rounded-trapezoid body, glossy",
+    "Flattened oval dome cap in matte pale-grey stone-like material",
+    "One olive branch with narrow silvery-green leaves on the right",
+    "One blank folded cream paper card, lower right, no text"
+  ],
+  "composition": [
+    "Bottle at left-center, olive branch running diagonally right",
+    "Foreground stone ledge occupies lower half, edge runs left-to-right",
+    "Plaster wall fills the background, no horizon line",
+    "Blank negative space upper right and upper left"
+  ],
+  "lighting": [
+    "Warm directional sunlight from upper left",
+    "Soft-edged diagonal light band across the upper-left wall",
+    "Soft shadow on right side of wall",
+    "Amber caustic glow cast on stone right of the bottle"
+  ],
+  "colorPalette": [
+    "Warm neutral beige and stone grey",
+    "Amber-brown translucent glass",
+    "Pale grey-beige cap",
+    "Muted olive green leaves",
+    "Cream paper"
+  ],
+  "camera": [
+    "Eye level, slightly above the ledge",
+    "Medium close-up product framing",
+    "Foreground sharp, wall gently out of focus",
+    "4:3 landscape orientation"
+  ],
+  "style": [
+    "Photographic product still life",
+    "Natural warm daylight studio look",
+    "Minimal, uncluttered styling",
+    "Fine photographic grain, low saturation"
+  ],
+  "qualityDetails": [
+    "Glossy glass with soft internal glow",
+    "Pitted, porous travertine-like stone texture",
+    "Mottled matte plaster wall texture",
+    "Crisp folded paper edges"
+  ],
+  "suggestedAspectRatio": "4:3"
+}

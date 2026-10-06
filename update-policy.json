@@ -1,0 +1,11 @@
+{
+  "id": "hiapi-image-to-prompt",
+  "version": "0.1.0",
+  "updatePolicy": {
+    "latestVersion": "0.1.0",
+    "minimumVersion": "0.1.0",
+    "updateCommand": "npx --yes --package=github:HiAPIAI/hiapi-image-to-prompt-skill hiapi-image-to-prompt-install --target=\"${AGENT_SKILLS_DIR:-$HOME/.codex/skills}\" --force",
+    "notice": "A newer HiAPI Image to Prompt skill is available.",
+    "requiredNotice": "This HiAPI Image to Prompt skill version is outdated. Update before making live HiAPI calls; the Agent-vision path and --dry-run keep working."
+  }
+}

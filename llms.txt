@@ -1,0 +1,15 @@
+# HiAPI Image to Prompt Agent Skill
+
+Turn one reference image into a prompt that makes an image model regenerate a similar image (general, GPT Image, Midjourney, FLUX, Stable Diffusion; English or Chinese). Default path uses the Agent's own vision with no key; optional script calls HiAPI chat/completions (deepseek-v4.1-flash, json_object) with the user's HIAPI_API_KEY.
+
+- [README](README.md): install, usage, expectations, FAQ
+- [Skill instructions](SKILL.md): when to use, both paths, safety
+- [Method / system prompt](references/system-prompt.md)
+- [Prompt modes](references/prompt-modes.md)
+- [Output contract](references/output.md) and [JSON Schema](references/output-schema.json)
+- [API call](references/api.md)
+- [Regenerate and compare](references/workflow.md)
+- [Evaluation and sources](references/evaluation.md)
+- [Agent installation](llms-install.md)
+- [Free web tool (coming soon)](https://www.hiapi.ai/en/tools/image-to-prompt)
+- [API keys](https://www.hiapi.ai/en/dashboard/api-keys)

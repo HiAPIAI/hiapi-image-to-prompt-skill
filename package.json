@@ -1,0 +1,22 @@
+{
+  "name": "hiapi-image-to-prompt-skill",
+  "version": "0.1.0",
+  "description": "HiAPI Image to Prompt Agent Skill — turn one reference image into a prompt that regenerates a similar image with GPT Image, Midjourney, FLUX, or Stable Diffusion",
+  "type": "module",
+  "private": true,
+  "homepage": "https://github.com/HiAPIAI/hiapi-image-to-prompt-skill#readme",
+  "repository": { "type": "git", "url": "git+https://github.com/HiAPIAI/hiapi-image-to-prompt-skill.git" },
+  "bugs": { "url": "https://github.com/HiAPIAI/hiapi-image-to-prompt-skill/issues" },
+  "bin": {
+    "hiapi-image-to-prompt-install": "./scripts/install.mjs",
+    "hiapi-image-to-prompt": "./scripts/image-to-prompt.mjs",
+    "hiapi-image-to-prompt-check": "./scripts/check-config.mjs"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "check:contract": "node scripts/check-config.mjs"
+  },
+  "keywords": ["hiapi", "image-to-prompt", "reverse-prompt", "image-prompt-generator", "prompt-engineering", "gpt-image", "gpt-image-2-5", "midjourney", "flux", "stable-diffusion", "agent-skill", "codex", "claude-code"],
+  "license": "MIT",
+  "engines": { "node": ">=18.3" }
+}
