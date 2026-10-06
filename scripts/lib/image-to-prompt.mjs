@@ -78,6 +78,7 @@ export function buildUserText({ mode, language, width, height }) {
 Output language: ${language === "zh" ? "Simplified Chinese" : "English"}.
 Source dimensions: ${width}x${height}.
 Closest common aspect ratio: ${ratio}.
+Orientation: ${width > height ? "landscape (wider than tall)" : width < height ? "portrait (taller than wide)" : "square"}. State this orientation correctly.
 Output adaptation: ${promptModeInstruction(mode, language, ratio)}
 Return only the JSON object.`;
 }

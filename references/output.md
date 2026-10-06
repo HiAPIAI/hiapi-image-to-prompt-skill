@@ -26,4 +26,4 @@ A leading Markdown code fence is tolerated. Try again or switch `--model` after 
 
 ## Example
 
-[examples/product-still-life.gpt_image.en.json](../examples/product-still-life.gpt_image.en.json) is an unedited v3 result for a 1200x900 product photo. Note one real slip it contains: `mainPrompt` calls the frame "vertical" although the image and `suggestedAspectRatio` are 4:3 landscape. When you regenerate, pass the aspect ratio explicitly; it wins over a wrong orientation word.
+[examples/product-still-life.gpt_image.en.json](../examples/product-still-life.gpt_image.en.json) is an unedited v3 result for a 1200x900 product photo. When you regenerate, pass `suggestedAspectRatio` explicitly as the aspect ratio.

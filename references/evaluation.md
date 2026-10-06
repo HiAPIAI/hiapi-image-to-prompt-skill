@@ -25,7 +25,7 @@ v3 is the shipped method.
 
 Text-only regeneration plateaus around "same concept and construction, detail differences" (about 7/10 by this judge). The prompt reliably carries medium, layout, dominant shape, light, palette, and quoted text; it does not carry exact faces, exact typography, or pixel-level arrangement. For near-identical results use image-to-image with the reference (for example GPT Image 2.5 image-to-image) — see [workflow.md](workflow.md).
 
-Known slip: the describer occasionally writes a wrong orientation word (the shipped example says "vertical" for a 4:3 landscape photo). The script overwrites `suggestedAspectRatio` with the measured ratio; pass it explicitly when regenerating.
+Known slip (fixed): early v3 runs sometimes wrote the wrong orientation word, e.g. "vertical" for a 4:3 landscape photo. The request now states the measured orientation explicitly, and the script still overwrites `suggestedAspectRatio` with the measured ratio; pass it explicitly when regenerating.
 
 ## Research that shaped the rules
 

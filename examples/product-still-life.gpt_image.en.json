@@ -1,51 +1,55 @@
 {
   "version": 1,
-  "title": "Amber Glass Fragrance Bottle with Olive Branch",
-  "summary": "A warm-lit product still life of an amber glass perfume bottle on a porous stone block, with an olive branch and a blank folded card, against a textured plaster wall.",
-  "mainPrompt": "A photograph, vertical product still life, warm directional sunlight. In the left-center, standing on a pale pitted stone block, is a single squat rounded-trapezoid perfume bottle of glossy translucent amber-brown glass, its shoulders wide and its sides tapering gently to a flat base; it is topped by a flattened oval dome cap in matte pale-grey stone-like material. A single olive branch with narrow silvery-green leaves lies along the right side of the stone ledge, entering from behind the bottle and trailing to the right frame edge. In the lower-right foreground a blank folded cream paper card rests tent-like on the stone, blank with no text. Behind, filling the frame, is a mottled grey-beige plaster wall. A soft-edged diagonal band of warm light falls across the upper-left wall and the top of the bottle, while the right side of the wall sits in soft shadow; the bottle casts an amber-tinted caustic glow onto the stone at its right. Eye-level camera slightly above the ledge, medium close-up, foreground tack-sharp with the wall gently out of focus. Warm neutral beige palette with amber and muted olive-green accents, low saturation, soft contrast, fine photographic grain, no golden cast on the grey wall.",
-  "negativePrompt": "text, letters, labels on the bottle, brand logo, extra bottles, multiple perfume flacons, additional olive branches, water droplets, hard specular hotspots, colored background, people, hands, oversaturated orange, cartoon or illustration rendering",
+  "title": "Amber Perfume Bottle on Travertine with Olive Branch",
+  "summary": "A warm studio still life of an amber glass perfume bottle with a pale oval cap on a porous stone block, an olive branch and a blank folded card beside it.",
+  "mainPrompt": "Studio still-life product photograph, landscape orientation, arranged along a soft diagonal that runs from the bottle at upper left down to the folded card at lower right. A single squat amber glass perfume bottle stands off-center left: rounded shoulders, sides tapering gently inward to a thick flat base, a liquid fill line about two-thirds up, glossy translucent dark-amber glass, capped by a matte pale greige oval stopper wider than the neck. Behind and to the right of the bottle lies one fresh olive branch, a thin woody stem with roughly twelve narrow silver-green leaves, laid nearly horizontal and sloping slightly down to the right. In the lower right foreground a blank cream folded card rests tent-style, slightly open, on the stone. The supporting surface is a cream travertine-like block with pitted pores and a straight chipped front edge crossing the lower left. A mottled pale grey-beige plaster wall fills the background. Soft directional daylight from the upper left rakes across the scene, throwing a long diagonal shadow to the right of the bottle and a warm amber caustic glow onto the stone beside its base. Warm neutral white balance with cream, amber and muted sage colors, fine photographic grain, matte stone and glossy glass highlights.",
+  "negativePrompt": "text or print on the card or bottle, extra bottles, extra olive branches or leaves, harsh black shadows, cool blue or cyan cast, cluttered props, warped or asymmetric bottle silhouette, glossy reflective stone, fantasy or illustrated rendering",
   "subject": [
-    "One amber-brown glass perfume bottle, squat rounded-trapezoid body, glossy",
-    "Flattened oval dome cap in matte pale-grey stone-like material",
-    "One olive branch with narrow silvery-green leaves on the right",
-    "One blank folded cream paper card, lower right, no text"
+    "Single squat amber glass perfume bottle, off-center left",
+    "Matte pale greige oval stopper wider than the bottle neck",
+    "Translucent amber glass with fill line and glossy reflections",
+    "One olive branch with about twelve silver-green leaves",
+    "Blank cream folded card resting tent-style at lower right",
+    "Porous cream travertine block as the display surface"
   ],
   "composition": [
-    "Bottle at left-center, olive branch running diagonally right",
-    "Foreground stone ledge occupies lower half, edge runs left-to-right",
-    "Plaster wall fills the background, no horizon line",
-    "Blank negative space upper right and upper left"
+    "Diagonal reading path from bottle upper left to card lower right",
+    "Bottle occupies center-left third, midground",
+    "Olive branch spans horizontally from behind bottle to right edge",
+    "Stone block front edge crosses the lower-left corner",
+    "Mottled plaster wall as plain background, upper half",
+    "Generous negative space at top left"
   ],
   "lighting": [
-    "Warm directional sunlight from upper left",
-    "Soft-edged diagonal light band across the upper-left wall",
-    "Soft shadow on right side of wall",
-    "Amber caustic glow cast on stone right of the bottle"
+    "Soft directional daylight from the upper left",
+    "Long soft diagonal bottle shadow falling to the right",
+    "Warm amber caustic glow on stone beside the base",
+    "Diffuse, even fill with no harsh specular hotspots"
   ],
   "colorPalette": [
-    "Warm neutral beige and stone grey",
-    "Amber-brown translucent glass",
-    "Pale grey-beige cap",
-    "Muted olive green leaves",
-    "Cream paper"
+    "Deep amber and honey brown",
+    "Cream and warm beige stone",
+    "Pale greige stopper and mottled grey-beige wall",
+    "Muted sage and silver-green olive leaves",
+    "Warm neutral white balance, no cool cast"
   ],
   "camera": [
-    "Eye level, slightly above the ledge",
-    "Medium close-up product framing",
-    "Foreground sharp, wall gently out of focus",
-    "4:3 landscape orientation"
+    "Eye-level to slightly elevated camera angle",
+    "Medium close-up on the still-life arrangement",
+    "Moderate depth of field, wall softly out of focus",
+    "Landscape 4:3 framing with level horizon"
   ],
   "style": [
-    "Photographic product still life",
-    "Natural warm daylight studio look",
-    "Minimal, uncluttered styling",
-    "Fine photographic grain, low saturation"
+    "Clean commercial product photography",
+    "Minimal, natural, editorial beauty styling",
+    "Realistic materials: glass, stone, fresh foliage",
+    "Restrained, uncluttered set design"
   ],
   "qualityDetails": [
-    "Glossy glass with soft internal glow",
-    "Pitted, porous travertine-like stone texture",
-    "Mottled matte plaster wall texture",
-    "Crisp folded paper edges"
+    "Fine photographic grain across the frame",
+    "Matte pitted texture on the stone block",
+    "Sharp glossy highlights on the bottle glass",
+    "Crisp leaf edges against the soft background"
   ],
   "suggestedAspectRatio": "4:3"
 }
