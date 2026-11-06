@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { test } from "node:test";
-import { SKILL_ID, SKILL_VERSION, UPDATE_COMMAND, checkSkillUpdate, compareVersions } from "../scripts/lib/image-to-prompt.mjs";
+import { DEFAULT_SITE_URL, SKILL_ID, SKILL_VERSION, UPDATE_COMMAND, checkSkillUpdate, compareVersions } from "../scripts/lib/image-to-prompt.mjs";
 
 const readJson = async (p) => JSON.parse(await readFile(new URL(`../${p}`, import.meta.url), "utf8"));
 const policy = await readJson("update-policy.json");
@@ -40,4 +40,9 @@ test("central first, repository fallback, outage is unverified not blocking", as
   assert.equal(calls, 2);
   assert.equal((await checkSkillUpdate({ fetchImpl: async () => { throw new Error("offline"); }, env })).status, "unverified");
   assert.equal((await checkSkillUpdate({ env: { HIAPI_SKIP_UPDATE_CHECK: "1" } })).status, "skipped");
+});
+
+test("public no-key endpoints use the api host", () => {
+  assert.equal(DEFAULT_SITE_URL, "https://api.hiapi.ai");
+  assert.ok(`${DEFAULT_SITE_URL}/api/models/content`.startsWith("https://api.hiapi.ai/api/"));
 });

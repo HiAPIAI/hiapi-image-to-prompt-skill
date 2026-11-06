@@ -3,9 +3,9 @@ import { readFile, stat } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 
 export const SKILL_ID = "hiapi-image-to-prompt";
-export const SKILL_VERSION = "0.1.0";
+export const SKILL_VERSION = "0.1.1";
 export const DEFAULT_BASE_URL = "https://api.hiapi.ai";
-export const DEFAULT_SITE_URL = "https://www.hiapi.ai";
+export const DEFAULT_SITE_URL = "https://api.hiapi.ai";
 export const DEFAULT_MODEL = "deepseek-v4.1-flash";
 export const MAX_IMAGE_BYTES = 4 * 1024 * 1024;
 export const MAX_TOKENS = 8000;

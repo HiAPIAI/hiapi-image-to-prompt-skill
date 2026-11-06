@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.1 — 2026-11-07
+
+- Public no-key model metadata is read from `https://api.hiapi.ai`. `DEFAULT_SITE_URL` now points at the API host, which keeps `npm run check:contract` working; `https://www.hiapi.ai/api/...` redirects to `https://hiapi.ai/api/...` and returns 404.
+- **Soft upgrade**: `latestVersion` is 0.1.1 and `minimumVersion` remains 0.1.0.
+
 ## 0.1.0 — 2026-10-06
 
 - First local release candidate.

@@ -1,6 +1,6 @@
 {
   "name": "hiapi-image-to-prompt-skill",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "HiAPI Image to Prompt Agent Skill — turn one reference image into a prompt that regenerates a similar image with GPT Image, Midjourney, FLUX, or Stable Diffusion",
   "type": "module",
   "private": true,

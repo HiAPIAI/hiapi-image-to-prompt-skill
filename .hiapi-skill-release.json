@@ -3,7 +3,7 @@
   "skillId": "hiapi-image-to-prompt",
   "skillName": "HiAPI Image to Prompt",
   "family": "image-to-prompt",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "status": "local-candidate",
   "publicRepo": "HiAPIAI/hiapi-image-to-prompt-skill",
   "modelIds": ["deepseek-v4.1-flash"],
