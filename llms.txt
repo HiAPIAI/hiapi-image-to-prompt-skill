@@ -11,5 +11,5 @@ Turn one reference image into a prompt that makes an image model regenerate a si
 - [Regenerate and compare](references/workflow.md)
 - [Evaluation and sources](references/evaluation.md)
 - [Agent installation](llms-install.md)
-- [Free web tool (coming soon)](https://www.hiapi.ai/en/tools/image-to-prompt)
-- [API keys](https://www.hiapi.ai/en/dashboard/api-keys)
+- [Free web tool (coming soon)](https://www.hiapi.ai/en/tools/image-to-prompt?utm_source=github&utm_medium=readme&utm_campaign=hiapi-image-to-prompt)
+- [API keys](https://www.hiapi.ai/en/dashboard/api-keys?utm_source=github&utm_medium=readme&utm_campaign=hiapi-image-to-prompt)

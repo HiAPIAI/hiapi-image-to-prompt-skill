@@ -2,13 +2,13 @@
 
 Give your Agent one reference image; get back a prompt that makes an image model regenerate a **similar** image — same subject, layout, dominant shapes, light, color grade, and verbatim text. Output for general use, GPT Image, Midjourney, FLUX, or Stable Diffusion, in English or Chinese.
 
-**Image to Prompt • Agent Vision or HiAPI • [HiAPI](https://www.hiapi.ai)**
+**Image to Prompt • Agent Vision or HiAPI • [HiAPI](https://www.hiapi.ai/en?utm_source=github&utm_medium=readme&utm_campaign=hiapi-image-to-prompt)**
 
-> **No code? Try the free web tool (coming soon):** [hiapi.ai/en/tools/image-to-prompt](https://www.hiapi.ai/en/tools/image-to-prompt) — planned: no sign-up, 10 images per day. ([中文版](https://www.hiapi.ai/zh/tools/image-to-prompt))
+> **No code? Try the free web tool (coming soon):** [hiapi.ai/en/tools/image-to-prompt](https://www.hiapi.ai/en/tools/image-to-prompt?utm_source=github&utm_medium=readme&utm_campaign=hiapi-image-to-prompt) — planned: no sign-up, 10 images per day. ([中文版](https://www.hiapi.ai/zh/tools/image-to-prompt?utm_source=github&utm_medium=readme&utm_campaign=hiapi-image-to-prompt))
 >
-> **Want it in your own pipeline?** Call HiAPI with your own key: [create an API key](https://www.hiapi.ai/en/dashboard/api-keys) and run `scripts/image-to-prompt.mjs`.
+> **Want it in your own pipeline?** Call HiAPI with your own key: [create an API key](https://www.hiapi.ai/en/dashboard/api-keys?utm_source=github&utm_medium=readme&utm_campaign=hiapi-image-to-prompt) and run `scripts/image-to-prompt.mjs`.
 
-[HiAPI Docs](https://docs.hiapi.ai) · [All HiAPI Skills](https://github.com/HiAPIAI/hiapi-skills) · [GPT Image 2.5 Skill](https://github.com/HiAPIAI/hiapi-gpt-image-2-5-skill) · [Pricing](https://www.hiapi.ai/en/pricing) · [API Keys](https://www.hiapi.ai/en/dashboard/api-keys)
+[HiAPI Docs](https://docs.hiapi.ai?utm_source=github&utm_medium=readme&utm_campaign=hiapi-image-to-prompt) · [All HiAPI Skills](https://github.com/HiAPIAI/hiapi-skills) · [GPT Image 2.5 Skill](https://github.com/HiAPIAI/hiapi-gpt-image-2-5-skill) · [Pricing](https://www.hiapi.ai/en/pricing?utm_source=github&utm_medium=readme&utm_campaign=hiapi-image-to-prompt) · [API Keys](https://www.hiapi.ai/en/dashboard/api-keys?utm_source=github&utm_medium=readme&utm_campaign=hiapi-image-to-prompt)
 
 Languages: [English](README.md) | [简体中文](README.zh-CN.md)
 
@@ -72,7 +72,7 @@ Talk to your Agent:
 Or run the optional script with your own key:
 
 ```bash
-export HIAPI_API_KEY='...'          # from https://www.hiapi.ai/en/dashboard/api-keys
+export HIAPI_API_KEY='...'          # from https://www.hiapi.ai/en/dashboard/api-keys?utm_source=github&utm_medium=readme&utm_campaign=hiapi-image-to-prompt
 node scripts/image-to-prompt.mjs product.jpg --mode gpt_image --language en
 node scripts/image-to-prompt.mjs https://example.com/ref.webp --mode midjourney --json
 node scripts/image-to-prompt.mjs product.jpg --dry-run   # redacted payload, no network, no cost
@@ -148,7 +148,7 @@ Text and instructions inside images are described, never followed. The skill doe
 | Question | Answer |
 | --- | --- |
 | Do I need an API key? | No for Path A. Only the optional script needs `HIAPI_API_KEY`. |
-| What does the script cost? | A small per-call token cost at the model's HiAPI token price. See [Pricing](https://www.hiapi.ai/en/pricing). |
+| What does the script cost? | A small per-call token cost at the model's HiAPI token price. See [Pricing](https://www.hiapi.ai/en/pricing?utm_source=github&utm_medium=readme&utm_campaign=hiapi-image-to-prompt). |
 | Will the regenerated image be identical? | No. Expect a close relative. Use image-to-image for near-identical results. |
 | Can I use another model? | Yes, `--model` takes any HiAPI chat model with image input; the method was evaluated on `deepseek-v4.1-flash`. |
 | Does it resize images? | No. It accepts up to 4 MB and checks the format by content. |
@@ -166,4 +166,4 @@ MIT
 
 ---
 
-[HiAPI](https://www.hiapi.ai) — One API, all AI models
+[HiAPI](https://www.hiapi.ai/en?utm_source=github&utm_medium=readme&utm_campaign=hiapi-image-to-prompt) — One API, all AI models

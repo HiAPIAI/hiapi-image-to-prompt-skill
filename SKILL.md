@@ -43,7 +43,7 @@ node scripts/image-to-prompt.mjs photo.png --json                 # validated JS
 node scripts/image-to-prompt.mjs photo.png --dry-run              # redacted payload, no network, no cost
 ```
 
-- Needs `HIAPI_API_KEY` in the environment (keys: https://www.hiapi.ai/en/dashboard/api-keys). Never ask the user to paste the key into chat; never print or store it.
+- Needs `HIAPI_API_KEY` in the environment (keys: https://www.hiapi.ai/en/dashboard/api-keys?utm_source=skill&utm_medium=agent&utm_campaign=hiapi-image-to-prompt). Never ask the user to paste the key into chat; never print or store it.
 - Each live call has a small per-call token cost on the user's HiAPI balance. Say so before the first live call.
 - Input: JPEG, PNG, or WebP up to 4 MB (checked by content). No resizing.
 - Exit code 2 is a usage/configuration problem, 1 is an API or output failure. Report the printed message; do not loop on retries.
@@ -63,7 +63,7 @@ Offer it after delivering the prompt. Hand `mainPrompt` and `suggestedAspectRati
 
 ## Links
 
-- Free web tool (coming soon; planned: no sign-up, 10 images per day): https://www.hiapi.ai/en/tools/image-to-prompt
-- HiAPI API keys: https://www.hiapi.ai/en/dashboard/api-keys
-- Pricing: https://www.hiapi.ai/en/pricing
+- Free web tool (coming soon; planned: no sign-up, 10 images per day): https://www.hiapi.ai/en/tools/image-to-prompt?utm_source=skill&utm_medium=agent&utm_campaign=hiapi-image-to-prompt
+- HiAPI API keys: https://www.hiapi.ai/en/dashboard/api-keys?utm_source=skill&utm_medium=agent&utm_campaign=hiapi-image-to-prompt
+- Pricing: https://www.hiapi.ai/en/pricing?utm_source=skill&utm_medium=agent&utm_campaign=hiapi-image-to-prompt
 - All HiAPI skills: https://github.com/HiAPIAI/hiapi-skills

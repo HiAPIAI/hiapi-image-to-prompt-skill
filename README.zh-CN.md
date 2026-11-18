@@ -2,13 +2,13 @@
 
 给 Agent 一张参考图，得到一段能让图像模型重新生成**相似**图片的提示词：主体、布局、主导构图形状、光线、色调和原文文字都会保留。可输出通用、GPT Image、Midjourney、FLUX 或 Stable Diffusion 格式，中文或英文。
 
-**图片反推提示词 • Agent 自带视觉或 HiAPI • [HiAPI](https://www.hiapi.ai)**
+**图片反推提示词 • Agent 自带视觉或 HiAPI • [HiAPI](https://www.hiapi.ai/zh?utm_source=github&utm_medium=readme&utm_campaign=hiapi-image-to-prompt)**
 
-> **不想写代码？试试免费网页工具（即将上线）：** [hiapi.ai/zh/tools/image-to-prompt](https://www.hiapi.ai/zh/tools/image-to-prompt) —— 计划免注册、每天 10 张。（[English](https://www.hiapi.ai/en/tools/image-to-prompt)）
+> **不想写代码？试试免费网页工具（即将上线）：** [hiapi.ai/zh/tools/image-to-prompt](https://www.hiapi.ai/zh/tools/image-to-prompt?utm_source=github&utm_medium=readme&utm_campaign=hiapi-image-to-prompt) —— 计划免注册、每天 10 张。（[English](https://www.hiapi.ai/en/tools/image-to-prompt?utm_source=github&utm_medium=readme&utm_campaign=hiapi-image-to-prompt)）
 >
-> **想接入自己的流程？** 用你自己的 Key 调用 HiAPI：[创建 API Key](https://www.hiapi.ai/en/dashboard/api-keys)，然后运行 `scripts/image-to-prompt.mjs`。
+> **想接入自己的流程？** 用你自己的 Key 调用 HiAPI：[创建 API Key](https://www.hiapi.ai/en/dashboard/api-keys?utm_source=github&utm_medium=readme&utm_campaign=hiapi-image-to-prompt)，然后运行 `scripts/image-to-prompt.mjs`。
 
-[HiAPI 文档](https://docs.hiapi.ai) · [全部 HiAPI Skills](https://github.com/HiAPIAI/hiapi-skills) · [GPT Image 2.5 Skill](https://github.com/HiAPIAI/hiapi-gpt-image-2-5-skill) · [价格](https://www.hiapi.ai/en/pricing) · [API Keys](https://www.hiapi.ai/en/dashboard/api-keys)
+[HiAPI 文档](https://docs.hiapi.ai?utm_source=github&utm_medium=readme&utm_campaign=hiapi-image-to-prompt) · [全部 HiAPI Skills](https://github.com/HiAPIAI/hiapi-skills) · [GPT Image 2.5 Skill](https://github.com/HiAPIAI/hiapi-gpt-image-2-5-skill) · [价格](https://www.hiapi.ai/en/pricing?utm_source=github&utm_medium=readme&utm_campaign=hiapi-image-to-prompt) · [API Keys](https://www.hiapi.ai/en/dashboard/api-keys?utm_source=github&utm_medium=readme&utm_campaign=hiapi-image-to-prompt)
 
 语言：[English](README.md) | [简体中文](README.zh-CN.md)
 
@@ -72,7 +72,7 @@ npx --yes --package=github:HiAPIAI/hiapi-image-to-prompt-skill hiapi-image-to-pr
 或用自己的 Key 运行可选脚本：
 
 ```bash
-export HIAPI_API_KEY='...'          # 在 https://www.hiapi.ai/en/dashboard/api-keys 创建
+export HIAPI_API_KEY='...'          # 在 https://www.hiapi.ai/en/dashboard/api-keys?utm_source=github&utm_medium=readme&utm_campaign=hiapi-image-to-prompt 创建
 node scripts/image-to-prompt.mjs product.jpg --mode gpt_image --language zh
 node scripts/image-to-prompt.mjs https://example.com/ref.webp --mode midjourney --json
 node scripts/image-to-prompt.mjs product.jpg --dry-run   # 打印脱敏请求，不联网、不扣费
@@ -109,7 +109,7 @@ node scripts/image-to-prompt.mjs product.jpg --dry-run   # 打印脱敏请求，
 | 问题 | 回答 |
 | --- | --- |
 | 需要 API Key 吗？ | 路径 A 不需要；只有可选脚本需要 `HIAPI_API_KEY`。 |
-| 脚本费用？ | 按模型在 HiAPI 的 token 价格计费，每次调用费用很少。见[价格](https://www.hiapi.ai/en/pricing)。 |
+| 脚本费用？ | 按模型在 HiAPI 的 token 价格计费，每次调用费用很少。见[价格](https://www.hiapi.ai/en/pricing?utm_source=github&utm_medium=readme&utm_campaign=hiapi-image-to-prompt)。 |
 | 重新生成的图会一模一样吗？ | 不会，是相近的图。要接近一模一样请用图生图。 |
 | 能换模型吗？ | 可以，`--model` 接受任意支持图片输入的 HiAPI 对话模型；方法是在 `deepseek-v4.1-flash` 上评测的。 |
 | 会压缩图片吗？ | 不会。上限 4 MB，按内容检查格式。 |
@@ -127,4 +127,4 @@ MIT
 
 ---
 
-[HiAPI](https://www.hiapi.ai) — One API, all AI models
+[HiAPI](https://www.hiapi.ai/zh?utm_source=github&utm_medium=readme&utm_campaign=hiapi-image-to-prompt) — One API, all AI models
