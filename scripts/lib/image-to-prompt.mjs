@@ -274,8 +274,8 @@ function httpErrorMessage(status, body) {
   const detail = String(body?.error?.message || body?.message || "").slice(0, 300);
   const hints = {
     400: "HiAPI rejected the request",
-    401: "HIAPI_API_KEY is missing or invalid. Create a key at https://www.hiapi.ai/en/dashboard/api-keys?utm_source=skill&utm_medium=agent&utm_campaign=hiapi-image-to-prompt",
-    402: "Insufficient HiAPI balance. Top up at https://www.hiapi.ai/en/pricing?utm_source=skill&utm_medium=agent&utm_campaign=hiapi-image-to-prompt",
+    401: "HIAPI_API_KEY is missing or invalid. Create a key at https://www.hiapi.ai/en/dashboard/api-keys",
+    402: "Insufficient HiAPI balance. Top up at https://www.hiapi.ai/en/pricing",
     403: "This key is not allowed to use the model",
     404: "Model not found; check --model",
     429: "Rate limited; wait and try again",
@@ -290,7 +290,7 @@ function httpErrorMessage(status, body) {
  * never retried, so a slow-but-accepted call is not billed twice.
  */
 export async function requestCompletion(payload, { apiKey, baseUrl = DEFAULT_BASE_URL, fetchImpl = fetch, timeoutMs = REQUEST_TIMEOUT_MS } = {}) {
-  if (!apiKey) throw new UsageError("HIAPI_API_KEY is not set. Create a key at https://www.hiapi.ai/en/dashboard/api-keys?utm_source=skill&utm_medium=agent&utm_campaign=hiapi-image-to-prompt and export it; or skip the script and let your Agent describe the image itself.");
+  if (!apiKey) throw new UsageError("HIAPI_API_KEY is not set. Create a key at https://www.hiapi.ai/en/dashboard/api-keys and export it; or skip the script and let your Agent describe the image itself.");
   const url = `${baseUrl.replace(/\/+$/, "")}/v1/chat/completions`;
   const init = () => ({
     method: "POST",

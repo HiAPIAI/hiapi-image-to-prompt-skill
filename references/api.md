@@ -52,4 +52,4 @@ Content-Type: application/json
 
 ## Cost
 
-Each live call spends a small per-call token cost at the model's HiAPI token price (input image + system prompt + output JSON). In our October 2026 tests with `deepseek-v4.1-flash` this was roughly US$0.002–0.004 per image; that is an observation, not a price guarantee. Current prices: https://www.hiapi.ai/en/pricing?utm_source=skill&utm_medium=agent&utm_campaign=hiapi-image-to-prompt.
+Each live call spends a small per-call token cost at the model's HiAPI token price (input image + system prompt + output JSON). In our October 2026 tests with `deepseek-v4.1-flash` this was roughly US$0.002–0.004 per image; that is an observation, not a price guarantee. Current prices: https://www.hiapi.ai/en/pricing.
