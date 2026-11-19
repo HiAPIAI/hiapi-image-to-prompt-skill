@@ -4,9 +4,9 @@ This file is written for AI agents. Read it before installing or using this skil
 
 Important links:
 
-- Free web tool (coming soon, not live yet): https://www.hiapi.ai/en/tools/image-to-prompt (zh: https://www.hiapi.ai/zh/tools/image-to-prompt)
-- HiAPI API keys: https://www.hiapi.ai/en/dashboard/api-keys
-- Pricing: https://www.hiapi.ai/en/pricing
+- Free web tool (coming soon, not live yet): https://www.hiapi.ai/en/tools/image-to-prompt?utm_source=github&utm_medium=readme&utm_campaign=hiapi-image-to-prompt (zh: https://www.hiapi.ai/zh/tools/image-to-prompt?utm_source=github&utm_medium=readme&utm_campaign=hiapi-image-to-prompt)
+- HiAPI API keys: https://www.hiapi.ai/en/dashboard/api-keys?utm_source=github&utm_medium=readme&utm_campaign=hiapi-image-to-prompt
+- Pricing: https://www.hiapi.ai/en/pricing?utm_source=github&utm_medium=readme&utm_campaign=hiapi-image-to-prompt
 - Companion for regeneration: https://github.com/HiAPIAI/hiapi-gpt-image-2-5-skill
 - HiAPI skills directory: https://github.com/HiAPIAI/hiapi-skills
 
